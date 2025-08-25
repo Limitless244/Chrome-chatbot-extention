@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Code-Chat</h2>
+        </header>
+        
+        <div class="input-section">
+            <textarea id="query" placeholder="Describe your coding question or paste your code here...&#10;Example: How do I fix this error?&#10;Example: Explain this code:"></textarea>
+            
+            <div class="options">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="includeCode" checked>
+                    <span class="checkmark"></span>
+                    Include visible code
+                </label>
+                <select id="language" title="Programming Language">
+                    <option value="">Auto-detect</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                    <option value="csharp">C#</option>
+                </select>
+            </div>
+
+            <button id="askBtn">
+                <span class="button-text">Ask AI</span>
+                <div class="spinner hidden"></div>
+            </button>
+        </div>
+
+        <div id="response" class="response-section hidden">
+            <div class="response-header">
+                <h3>AI Response</h3>
+                <button id="copyBtn" class="icon-button" title="Copy to clipboard">
+                    <svg width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M4 4v10h10V4H4zm9 9H5V5h8v8z"/>
+                        <path d="M2 2v10h1V3h9V2H2z"/>
+                    </svg>
+                </button>
+            </div>
+            <div id="responseContent"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
